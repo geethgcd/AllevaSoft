@@ -1,0 +1,287 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>migrate-angular-js documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">migrate-angular-js documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  HomeComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/home/home.component.ts</code>
+</p>
+
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-home</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./home.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./home.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;app-home&#x27;,
+  templateUrl: &#x27;./home.component.html&#x27;,
+  styleUrls: [&#x27;./home.component.scss&#x27;]
+})
+export class HomeComponent {}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;h2 style&#x3D;&quot;margin-top: 0;&quot;&gt;Alleva Test&lt;/h2&gt;
+&lt;p&gt;
+    Welcome to the Alleva test application. This is a simple AngularJS app
+    which you will be using to demonstrate your skills in migrating AngularJS
+    code to modern Angular.
+&lt;/p&gt;
+&lt;p&gt;The goal of this exercise is for you to:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Identify the AngularJS code that needs to be migrated.&lt;/li&gt;
+    &lt;li&gt;Identify the Angular 2+ code that needs to be written (use TypeScript).&lt;/li&gt;
+    &lt;li&gt;Identify and Refactor any AngularJS non-standard code practices when converting. &lt;/li&gt;
+    &lt;li&gt;Use the Angular CLI to build the application.&lt;/li&gt;
+    &lt;li&gt;Write and test the new Angular 2+ code.&lt;/li&gt;
+    &lt;li&gt;The application must maintain the current routes.&lt;/li&gt;
+    &lt;li&gt;The application must use SCSS for styling.&lt;/li&gt;
+    &lt;li&gt;The application should maintain an index page.&lt;/li&gt;
+    &lt;li&gt;Ensure the application works as expected.&lt;/li&gt;
+    &lt;li&gt;Models should be immutable.&lt;/li&gt;
+    &lt;li&gt;Make good use of comments, and self-documenting code. No comments in markup.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bonus points:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Forms should use proper validation techniques.&lt;/li&gt;
+    &lt;li&gt;Application should use proper type checking (no &quot;any&quot; types for instance).&lt;/li&gt;
+    &lt;li&gt;Add meta to Routes (e.g. page title).&lt;/li&gt;
+    &lt;li&gt;Implement a good linting strategy.&lt;/li&gt;
+    &lt;li&gt;Implement a good directory structure.&lt;/li&gt;
+    &lt;li&gt;Use loading indicators where necessary.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- &lt;a type&#x3D;&quot;button&quot; ng-href&#x3D;&quot;{{ link }}&quot;&gt;Next page&lt;/a&gt; --&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./home.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><h2 style="margin-top: 0;">Alleva Test</h2><p>    Welcome to the Alleva test application. This is a simple AngularJS app    which you will be using to demonstrate your skills in migrating AngularJS    code to modern Angular.</p><p>The goal of this exercise is for you to:</p><ul>    <li>Identify the AngularJS code that needs to be migrated.</li>    <li>Identify the Angular 2+ code that needs to be written (use TypeScript).</li>    <li>Identify and Refactor any AngularJS non-standard code practices when converting. </li>    <li>Use the Angular CLI to build the application.</li>    <li>Write and test the new Angular 2+ code.</li>    <li>The application must maintain the current routes.</li>    <li>The application must use SCSS for styling.</li>    <li>The application should maintain an index page.</li>    <li>Ensure the application works as expected.</li>    <li>Models should be immutable.</li>    <li>Make good use of comments, and self-documenting code. No comments in markup.</li></ul><p>Bonus points:</p><ul>    <li>Forms should use proper validation techniques.</li>    <li>Application should use proper type checking (no "any" types for instance).</li>    <li>Add meta to Routes (e.g. page title).</li>    <li>Implement a good linting strategy.</li>    <li>Implement a good directory structure.</li>    <li>Use loading indicators where necessary.</li></ul><!-- <a type="button" ng-href="{{ link }}">Next page</a> --></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'SongFormComponent', 'selector': 'app-song-form'},{'name': 'SongsComponent', 'selector': 'app-songs'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'HomeComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

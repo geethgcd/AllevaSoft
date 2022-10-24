@@ -1,0 +1,43 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+
+<div>
+    <div class="songs-table">
+        <button id="song-create-button" mat-raised-button [routerLink]="['/songs/song/new' ]" class="create-button" color="primary">Create</button>
+
+        <table id="songs-list-table" mat-table class="mat-elevation-z8" [dataSource]="songs" matSort>
+            <ng-container matColumnDef="title">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef>Title</th>
+                <td mat-cell id="song-id-{{element.id}}-title" *matCellDef="let element">{{ element.title }}</td>
+            </ng-container>
+            <ng-container matColumnDef="artist">
+              <th mat-header-cell mat-sort-header *matHeaderCellDef>Artist</th>
+              <td mat-cell id="song-id-{{element.id}}-artist" *matCellDef="let element">{{ element.artist }}</td>
+          </ng-container>
+            <ng-container matColumnDef="year">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef>Year</th>
+                <td mat-cell id="song-id-{{element.id}}-year" *matCellDef="let element">{{ element.year }}</td>
+            </ng-container>
+            <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef>Action</th>
+                <td mat-cell *matCellDef="let element">
+                  <button id="song-id-{{element.id}}-edit" mat-icon-button [routerLink]="['/songs/song/' + element.id ]">
+                    <mat-icon>edit</mat-icon
+                    >
+                  </button>
+                  &nbsp;
+                  <button color="danger" id="song-id-{{element.id}}-delete" (click)="removeSong(element.id)" >
+                    <mat-icon>delete</mat-icon
+                    >
+                  </button>
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+        <mat-paginator
+            class="mat-elevation-z8"
+            [pageSizeOptions]="[10, 15, 20]"
+            showFirstLastButtons
+        ></mat-paginator>
+      </div>
+</div>

@@ -14,9 +14,16 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Running integration tests
+*Note* Must execute `npm install -g @compodoc/compodoc`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `npm run test` to execute the unit tests via Cypress.
+
+## Running self-documentation tests
+
+*Note* Must execute `npm install cypress -D `
+
+Run `npm run docs` to execute the unit tests via Compodoc.
 
 ## Running end-to-end tests
 

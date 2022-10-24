@@ -1,0 +1,30 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+
+<h1 id="song-form-title">{{ isCreate ? 'Create' : 'Edit'}} Song</h1>
+<form [formGroup]="form" class="mat-elevation-z8 padding">
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input id="song-form-title-field" formControlName="title" matInput placeholder="Title" required>
+      <mat-error *ngIf="title?.errors">
+        <strong id="song-form-title-error-required">Title</strong> Value required
+      </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Artist</mat-label>
+      <input id="song-form-artist-field" formControlName="artist" matInput placeholder="artist" required>
+      <mat-error  *ngIf="artist?.errors">
+        <strong id="song-form-artist-error-required">artist</strong> Value required
+      </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>year</mat-label>
+      <input id="song-form-year-field" formControlName="year" matInput placeholder="Year" required>
+      <mat-error *ngIf="year?.errors">
+        <strong id="song-form-year-error-required">year</strong> Value required
+      </mat-error>
+    </mat-form-field>
+    <br>
+    <button id="song-form-save-button" mat-button color="primary" (click)="submit()" [disabled]="this.form.invalid">Save</button>
+  </form>
